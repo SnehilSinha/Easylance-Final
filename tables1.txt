@@ -1,0 +1,38 @@
+ create table buyerinfo(username varchar(30),name varchar(30),date date,lang varchar(30),city varchar(30),exp varchar(30),qual varchar(30),jtype varchar(30),phno int);
+  
+
+ create table joblisting(id varchar(30) primary key,username varchar(30),des varchar(30),title varchar(30),exp varchar(30),qual varchar(30),jtype varchar(30));
+
+ create table login(username varchar(30) primary key,password varchar(30),category varchar(6));
+
+ create table ssign(username varchar(30) ,name varchar(30),comp varchar(30),city varchar(30),phno int);
+
+ create table binfo(username varchar(30),hobbies varchar(50));
+
+ alter table buyerinfo add foreign key(username) references login(username) on delete cascade;
+
+ alter table ssign add foreign key(username) references login(username) on delete cascade;
+
+ alter table joblisting add foreign key(username) references login(username) on delete cascade;
+//alter table binfo add foreign key(username) references buyerinfo(username) on delete cascade;
+
+8. insert into joblisting values('1','addhealth123','AddressHealth','We focus on providing healthcare in schools and clinics','BEGINNER','B.E.','Mobile App Developer');
+   insert into joblisting values('2','zomfood123','Zomato','Food delivered at your doorstep','ADVANCED','M.Tech','ML');
+   insert into joblisting values('3','payhere123','Paytm','Payment service that allows people to pay funds to each other','INTERMEDIATE','B.Tech','Mobile App Developer');
+   insert into joblisting values('4','freshfood123','FreshToHome','Delivery service that focuses on meat and fish','BEGINNER','B.E.','Graphic Design');
+   insert into joblisting values('5','bikes123','Bounce','Self Drive Bike Rental','INTERMEDIATE','B.E.','IoT');
+   insert into joblisting values('6','myra123','Myra','Medidicined delivered to your home','BEGINNER','B.Tech','Web Developer');
+
+9. insert into buyerinfo values('rajeev123','Rajeev Dwivedi','17-10-1993','ENGLISH','BANGALORE','INTERMEDIATE','B.E.','IoT',9714098767);
+   insert into buyerinfo values('ritika123','Ritika Singh','14-02-1990','ENGLISH','NEW DELHI','ADVANCED','M.Tech','ML',8193712390);
+   insert into buyerinfo values('shivam123','Shivam Agarwal','01-01-1991','HINDI','NEW DELHI','BEGINNER','B.Tech','Web Developer',9832091234);
+   insert into buyerinfo values('shivangi123','Shivangi Sharma','28-09-1989','ENGLISH','MUMBAI','INTERMEDIATE','B.Tech','Mobile App Developer',9876501234);
+   insert into buyerinfo values('charan123','Charan Reddy','11-11-1988','ENGLISH','CHENNAI','BEGINNER','B.E.','Graphic Design',7075434512);
+   insert into buyerinfo values('aliya123','Aliya Sinha','10-05-1985','ENGLISH','BANGALORE','BEGINNER','B.E.','Mobile App Developer',9982187546); 
+
+10. insert into binfo values('rajeev123','loves to play cricket,football and a gamer');  
+    insert into binfo values('ritika123','loves to sing,dance and plays chess');
+    insert into binfo values('shivam123','writer,traveller and an enthusiast');
+    insert into binfo values('shivangi123','eat,sleep,cook,repeat');
+    insert into binfo values('charan123','gamer,reader,writer');
+    insert into binfo values('aliya123','badminton player,swimmer and music lover');

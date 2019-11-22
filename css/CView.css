@@ -1,0 +1,51 @@
+.add a:hover {
+  border-bottom: 2px solid #181174;
+  background: #181174;
+  color: floralwhite;
+}
+.card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.list-group-item {
+  margin-inline: 10px;
+}
+
+.login-form h1 {
+  margin-top: 10px;
+}
+.login-form input[type='password'],
+.login-form input[type='number'],
+.login-form input[type='email'],
+.login-form input[type='text'] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dddddd;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+.login-form input[type='date'] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dddddd;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+.login-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dddddd;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+.login-form input[type='submit'] {
+  width: 100%;
+  padding: 12px;
+  background-color: #535b63;
+  border: 0;
+  border-radius: 32px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+}

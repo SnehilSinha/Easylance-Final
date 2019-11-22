@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>EasyLance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Cform.css">
+  <link rel="stylesheet" href="CView.css">
+    <style>
+ 
+    </style>
+  </head>
+
+  <body >
+	    <header>
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark mynav">
+					  <a class="navbar-brand" href="#">
+						<img src="logo1.png" alt="logo" style="width:40px;">
+					  </a>
+					  <a class="navbar-brand text-primary " href="#" text->Easylance</a>
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					  </button>
+			
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto">
+						  <li class="nav-item">
+							<a class="nav-link text-light" href="#"></a>
+						  </li>
+						  
+				</div>
+			 </nav>
+      </header>
+  </body>
+    <div class="login-form">
+      <h1>Worker Signup</h1>
+      <form action="http://127.0.0.1:8081/newBSignup" method="POST">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="date" name="date" placeholder="DD-MM-YYY" required />
+        <input type="text" name="username" placeholder="Username" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+
+        <select name="lang" required>
+          <option value="-1" selected>Language</option>
+          <option value="Hindi">HINDI</option>
+          <option value="English">ENGLISH</option>
+        </select>
+
+        <select name="city" required>
+          <option value="-1" selected>City</option>
+          <option value="New Delhi">NEW DELHI</option>
+          <option value="Mumbai">MUMBAI</option>
+          <option value="Bangalore">BANGALORE</option>
+          <option value="Chennai">CHENNAI</option>
+        </select>
+
+        <select name="exp" required>
+          <option value="-1" selected>Experience</option>
+          <option value="Beginner">BEGINNER</option>
+          <option value="Intermediate">INTERMEDIATE</option>
+          <option value="Advanced">ADVANCED</option>
+        </select>
+
+        <select name="qual" required>
+          <option value="-1" selected>Qualification</option>
+          <option value="B.Tech">B.Tech</option>
+          <option value="B.E.">B.E.</option>
+          <option value="M.Tech">M.Tech</option>
+          <option value="M.S.">M.S.</option>
+          <option value="PhD">PhD</option>
+        </select>
+
+        <select name="jtype" required>
+          <option value="-1" selected>Job Type</option>
+          <option value="ML">ML</option>
+          <option value="Mobile App Developer">Mobile App Developer</option>
+          <option value="IoT">IoT</option>
+          <option value="Web Developer">Web Developer</option>
+          <option value="Graphic Design">Graphic Design</option>
+        </select>
+
+        <input type="text" name="phno" placeholder="Mobile No" required />
+
+        <input type="submit" />
+
+        <a href="/Login" class="button" style="text-align: center;">Already a member?Login</a>
+      </form>
+    </div>
+  </body>
+</html>

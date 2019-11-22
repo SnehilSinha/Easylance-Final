@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<title>Login Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Cform.css">
+    <style>
+ 
+    </style>
+  </head>
+
+  <body >
+	    <header>
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark mynav">
+					  <a class="navbar-brand" href="#">
+						<img src="logo1.png" alt="logo" style="width:40px;">
+					  </a>
+					  <a class="navbar-brand text-primary " href="#" text->Easylance</a>
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					  </button>
+			
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto">
+						  <li class="nav-item">
+							<a class="nav-link text-light" href="#"></a>
+						
+				</div>
+			 </nav>
+			</header>
+    <div class="login-form">
+      <h1>Login Form</h1>
+      <form action="http://127.0.0.1:8081/O'auth" method="POST">
+        <input type="text" name="username" placeholder="Username" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input type="submit" />
+        <p <%=state%> class="invalid">Wrong Credentials</a>
+
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Easylance</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CView.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mynav">
+          <a class="navbar-brand" href="#">
+            <img src="logo1.png" alt="logo" style="width:40px;">
+          </a>
+          <a class="navbar-brand text-primary" href="#" text->Easylance</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              
+            <div class="add">    
+              <li class="nav-item">
+                <a href="http://127.0.0.1:8081/addjob" class="btn text-light" role="button">Add Job</a>
+              </li>
+            </div>
+            <a class="nav-link text-light" href="/logout">Logout</a> 
+    </div>
+ </nav>
+</header>
+      
+      
+<section>
+
+   <div class="container-fluid">
+       <h4 class="text-center text-capitalize pt-4">Jobs Available</h4>
+       <hr class="w-25 mx-auto pt-3">
+
+
+
+<%jobs.forEach(function(item){ %>
+<div class="card w-75 mx-auto">
+    <div class="card-header ">
+        <%=item.title%>
+    </div>
+  <div class="card-body">
+  <div class="col">
+  <div class = 'row'>
+      <div class = "  col">
+        <h5 class="card-title">Description</h5>
+        <p class="card-text"><%=item.des%></p>
+      </div>
+    <div class="card-header text-right">
+      <ul class="card-body list-group list-group-flush ">
+      <div class="d-flex flex-column ">
+        <li class="list-group-item text-center ">Experience: <%=item.exp%></li>
+        <li class="list-group-item text-center">Qualification: <%=item.qual%></li>
+        <li class="list-group-item text-center">Job Type: <%=item.jtype%></li>
+        <li class="list-group-item text-center">Job id: <%=item.id%></li>
+      </div>
+      </ul>
+    </div>         
+  </div>
+  <div class="card-body text-right">
+    <form action="http://127.0.0.1:8081/deletepost" method="POST">
+      <input type="hidden" name= "id" value="<%=item.id%>" >
+      <input type="Submit" value= "Delete" class="btn btn-primary"></input>
+      </form>
+    </div>
+      </div>
+  </div>
+</div>
+<%});%>
+      
+
+      
+      
+</section>
+
+
+      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

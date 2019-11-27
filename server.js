@@ -183,7 +183,7 @@ app.post('/newSSignup', urlencoderParser, function(req, res) {
       if (err) throw err;
       else {
         console.log('Record inserted');
-        res.redirect('/shome');
+        res.redirect('/loginrs');
       }
     }
   );
@@ -211,8 +211,8 @@ app.post('/addjob', redirectLogin, urlencoderParser, function(req, res) {
         console.log(id)
         
         con.query(
-          'INSERT INTO joblisting VALUES (?,?, ?, ?, ?, ?, ?)',
-          [id, username, title, des, exp, qual, jtype],
+          'INSERT INTO joblisting(username, title, des, exp, qual, jtype) VALUES (?, ?, ?, ?, ?, ?)',
+          [ username, title, des, exp, qual, jtype],
           function(err, result) {
             if (err) throw err;
             else {
